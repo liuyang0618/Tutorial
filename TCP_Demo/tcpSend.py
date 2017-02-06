@@ -1,6 +1,10 @@
 #coding=utf-8
 __author__ = 'Administrator'
 
+"""
+tcp发送端
+"""
+
 import  socket
 
 #创建socket对象(tcp类型)

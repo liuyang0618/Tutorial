@@ -1,6 +1,10 @@
 #encoding:utf-8
 __author__ = 'Administrator'
 
+"""
+tcp接收端
+"""
+
 import  socket
 
 #创建socket的对象
