@@ -22,7 +22,7 @@ data = clientsock.recv(1024)
 print ('received msg:', data)
 
 #向发送端发送数据
-clientsock.send(data + "-收到")
+clientsock.send(data + "-收到" )
 
 #结束
 clientsock.close()
