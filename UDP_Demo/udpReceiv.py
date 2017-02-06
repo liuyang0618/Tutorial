@@ -18,7 +18,7 @@ data, address = s.recvfrom(1024)
 #打印接收的信息
 print 'receive   msg: %s' % data
 
-#关闭连接
+#关闭 连接
 s.close()
 
 
