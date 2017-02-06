@@ -1,4 +1,4 @@
-#coding:utf-8
+#coding=utf-8
 __author__ = 'Administrator'
 
 import  socket
@@ -20,7 +20,7 @@ s.send("Hello world")
 data = s.recv(1024)
 
 #显示接收端返回的数据
-print('received sendback', data)
+print('received sendback: %s' % data)
 
 #结束
 s.close()
