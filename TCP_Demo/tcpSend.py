@@ -8,7 +8,7 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 #指定连接的地址和端口号
 addr = "192.168.98.213"
-port = 5055
+port = 5005
 
 #连接接收端
 s.connect((addr, port))
