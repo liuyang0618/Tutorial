@@ -28,30 +28,31 @@ class myFrame(wx.Frame):
         self.posCtrl2 = wx.TextCtrl(parent=panel, pos=(140,80))
 
         #创建一个按钮用于触发计算
-        wx.Button(parent=panel,label=u"计算",pos=(10,180))
-
+        self.btnSum = wx.Button(parent=panel,label=u"计算",pos=(10,180))
+        #给按钮绑定sum事件
+        self.Bind(wx.EVT_BUTTON,self.sum,self.btnSum)
 
      #定义按钮的触发函数
     def sum(self,event):
         n = int(self.posCtrl.GetValue())
         total =0
         for i in range(n+1):
-            total = total+i;
-        return total;
+            total = total+i
+        self.posCtrl2.SetValue(str(total))
 
 if __name__ == "__main__":
-    total =0
-    for i in range(4):
-            total = total+i;
+    # total =0
+    # for i in range(4):
+    #         total = total+i;
+    #
+    # print(total)
 
-    print(total)
-
-    # #创建app对象
-    # app = wx.App()
-    # #创建框架类对象
-    # frame = myFrame()
-    # #框架显示
-    # frame.Show(True)
-    # #创建事物循环
-    # app.MainLoop()
+    #创建app对象
+    app = wx.App()
+    #创建框架类对象
+    frame = myFrame()
+    #框架显示
+    frame.Show(True)
+    #创建事物循环
+    app.MainLoop()
 
