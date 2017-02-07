@@ -54,15 +54,7 @@ class myFrame(wx.Frame):
     def destroy(self, event):
         self.Destroy()  # 关闭窗口
 
-
-
 if __name__ == "__main__":
-    # total =0
-    # for i in range(4):
-    #         total = total+i;
-    #
-    # print(total)
-
     #创建app对象
     app = wx.App()
     #创建框架类对象
