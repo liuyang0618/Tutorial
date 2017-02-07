@@ -19,6 +19,12 @@ class myFrame(wx.Frame):
         wx.Frame.__init__(self,parent=None,title=u'求n的累加',pos=(100,200),size=(400,600))  #style=wx.DEFAULT_FRAME_STYLE^(wx.RESIZE_BORDER|wx.MINIMIZE_BOX|wx.MAXIMIZE_BOX)
         #创建一个面板
         panel = wx.Panel(self)
+        #给面板设置背景色
+        #panel.SetBackgroundColour("Purple")  #通过名称赋值（这种方式支持常见的几种英文名称颜色）
+        #panel.SetBackgroundColour("#00F5FF")  # 通过16色赋值
+        panel.SetBackgroundColour((0,245,255)) # 通过RGB赋值(0 ,245, 255)
+        #颜色对照参考网站:  http://tool.oschina.net/commons?type=3
+
         #创建一个静态文本框
         wx.StaticText(parent=panel, label=u"输入一个正整数n:", pos=(10,20))
         #创建一个文本框输入框
