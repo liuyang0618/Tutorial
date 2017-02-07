@@ -33,7 +33,7 @@ class myFrame(wx.Frame):
 
      #定义按钮的触发函数
     def sum(self,event):
-        n = int(self.posCtrl.GetValue())
+        n = int(self.posCtrl.GetValue() )
         total =0
         for i in range(n+1):
             total = total+i;
