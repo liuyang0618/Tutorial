@@ -17,7 +17,6 @@ class myFrame(wx.Frame):
         panel = wx.Panel(self)
         #将鼠标移动的事件绑定到自定义的OnMove方法
         panel.Bind(wx.EVT_MOTION, self.onMove)
-        panel.Bind
         #显示一个静态文本框
         wx.StaticText(parent=panel, label="Pos:", pos=(10,20))
         #创建一个文本框输入框
