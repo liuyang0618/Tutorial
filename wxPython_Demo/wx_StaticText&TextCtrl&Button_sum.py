@@ -7,6 +7,7 @@ __author__ = 'Administrator'
 求和
 详情说明：用文本框接收用户输入的变量n的值，计算1~n的累加结果，再将结果显示到另一个文本框中。
 例如：计算1+2+......+n, 数据输入和输出都是用文本框
+用到的控件：StaticText/TextCtrl/Button
 """
 
 #导入wx库
@@ -19,18 +20,21 @@ class myFrame(wx.Frame):
         #创建一个面板
         panel = wx.Panel(self)
         #创建一个静态文本框
-        wx.StaticText(parent=panel, label=u"输入一个整数:", pos=(10,20))
+        wx.StaticText(parent=panel, label=u"输入一个正整数n:", pos=(10,20))
         #创建一个文本框输入框
-        self.posCtrl = wx.TextCtrl(parent=panel, pos=(140,20))
+        self.posCtrl = wx.TextCtrl(parent=panel, pos=(160,20))
          #创建第二个静态文本框
-        wx.StaticText(parent=panel, label=u"累计的结果：", pos=(10,80))
+        wx.StaticText(parent=panel, label=u"累加结果（1+2+...+n）：", pos=(10,80))
         #创建第二个文本框输入框
-        self.posCtrl2 = wx.TextCtrl(parent=panel, pos=(140,80))
+        self.posCtrl2 = wx.TextCtrl(parent=panel, pos=(160,80))
 
         #创建一个按钮用于触发计算
         self.btnSum = wx.Button(parent=panel,label=u"计算",pos=(10,180))
+        # 创建二个按钮用于触发关闭窗口
+        self.btnSum2 = wx.Button(parent=panel, label=u"关闭", pos=(180, 180))
         #给按钮绑定sum事件
         self.Bind(wx.EVT_BUTTON,self.sum,self.btnSum)
+        self.Bind(wx.EVT_BUTTON, self.destroy, self.btnSum2)
 
      #定义按钮的触发函数
     def sum(self,event):
@@ -39,6 +43,12 @@ class myFrame(wx.Frame):
         for i in range(n+1):
             total = total+i
         self.posCtrl2.SetValue(str(total))
+
+    # 定义按钮的销毁函数
+    def destroy(self, event):
+        self.Destroy()  # 关闭窗口
+
+
 
 if __name__ == "__main__":
     # total =0
