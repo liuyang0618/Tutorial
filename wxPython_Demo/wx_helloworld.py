@@ -1,5 +1,5 @@
 #encoding:utf-8
-__author__ = 'Administrator'
+__author__ =  'Administrator'
 
 #导入 wx 模块
 import wx
