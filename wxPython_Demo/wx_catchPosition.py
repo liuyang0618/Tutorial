@@ -7,7 +7,7 @@ __author__ = 'Administrator'
     创建一个窗体，该窗体中有一个文本框，当鼠标在窗体中移动时，文本框显示当前鼠标的位置
 """
 
-import wx
+import  wx
 
 #创建框架类
 class myFrame(wx.Frame):

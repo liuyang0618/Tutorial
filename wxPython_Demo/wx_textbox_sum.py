@@ -10,7 +10,7 @@ __author__ = 'Administrator'
 """
 
 #导入wx库
-import wx
+import  wx
 
 #定义一个框架类
 class myFrame(wx.Frame):

@@ -2,7 +2,7 @@
 __author__ =  'Administrator'
 
 #导入 wx 模块
-import wx
+import  wx
 
 #定义应用程序类的一个对象
 app = wx.App()
