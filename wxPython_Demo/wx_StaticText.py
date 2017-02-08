@@ -18,11 +18,23 @@ class myFrame(wx.Frame):
         # 设置后背景色
         rev.SetBackgroundColour("black")
 
-        center = wx.StaticText(panel, -1, u"Text3:文本居中", (100, 50),(260,-1),style=(wx.ALIGN_CENTER))  #第二“-1”是指包裹父窗口的高度
+        center = wx.StaticText(panel, -1, u"Text3:文本居中", (100, 50),(260,-1),style=(wx.ALIGN_CENTER))  #第二“-1”是指包裹父窗口的高度|wx.ALIGN_CENTER
         # 设置前背景色
         center.SetForegroundColour("white")
         # 设置后背景色
         center.SetBackgroundColour("black")
+
+        str = wx.StaticText(panel, -1, u"Text4:改变字体", (100, 80),(260,-1),style=(wx.ALIGN_RIGHT))  #第二“-1”是指包裹父窗口的高度|wx.ALIGN_CENTER
+        #字体样式
+        font = wx.Font(16,wx.DECORATIVE, wx.ITALIC, wx.NORMAL)
+        #设置字体及字号
+        str.SetFont(font)
+        # 设置前背景色
+        str.SetForegroundColour("white")
+        # 设置后背景色
+        str.SetBackgroundColour("black")
+
+
 
 if __name__ == "__main__":
     #创建app对象
