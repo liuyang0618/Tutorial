@@ -28,7 +28,6 @@ class myFrame(wx.Frame):
         dialog = wx.MessageDialog(self,u"确认退出吗？",u"退出选择框",style=wx.OK|wx.CANCEL)  #|wx.ICON_QUESTION  如果添加这个就不会显示icon图标
         #对话框的模态显示
         result = dialog.ShowModal()
-        print(result)
 
         if result == wx.ID_OK:
             print(result)
