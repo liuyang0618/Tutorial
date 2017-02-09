@@ -17,16 +17,19 @@ class myFrame(wx.Frame):
         self.statusBar = self.CreateStatusBar()
         #创建工具栏 ,它会自动的放在框架的顶部
         toolbar = self.CreateToolBar()
-        #为工具栏添加工具
+        #为工具栏添加工具(工具一般都是有icon的)
         toolbar.AddSimpleTool(11,wx.Image('file.png',wx.BITMAP_TYPE_PNG).ConvertToBitmap(),"Open","Click it to open a file")
             #第一个参数：toolbar 的id
             #第二个参数：imge 是一个bitmap的图片
             #第三个参数： 聚焦的显示
             #第四个参数：点击的状态栏提示语
+        toolbar.AddSimpleTool(12,wx.Image('file2.png',wx.BITMAP_TYPE_PNG).ConvertToBitmap(),"OpenAgain","Click it to open a file again")
+
         #显示工具栏
         toolbar.Realize()
         #为工具栏添加EVT_TOOL响应事件
         wx.EVT_TOOL(self, 11, self.OnToolOpen)
+        wx.EVT_TOOL(self, 12, self.OnToolOpen)
 
         #创建一个MenuBar
         menubar = wx.MenuBar()
