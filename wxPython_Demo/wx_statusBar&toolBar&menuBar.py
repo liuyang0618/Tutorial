@@ -18,7 +18,7 @@ class myFrame(wx.Frame):
         #创建工具栏 ,它会自动的放在框架的顶部
         toolbar = self.CreateToolBar()
         #为工具栏添加工具(工具一般都是有icon的)
-        toolbar.AddSimpleTool(11,wx.Image('file.png',wx.BITMAP_TYPE_PNG).ConvertToBitmap(),"Open","Click it to open a file")
+        toolbar.AddSimpleTool(11,wx.Image('file.png', wx.BITMAP_TYPE_PNG).ConvertToBitmap(),"Open","Click it to open a file")
             #第一个参数：toolbar 的id
             #第二个参数：imge 是一个bitmap的图片
             #第三个参数： 聚焦的显示
