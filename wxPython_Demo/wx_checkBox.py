@@ -6,7 +6,7 @@ import wx
 
 class myFrame(wx.Frame):
     def __init__(self, superior):
-        wx.Frame.__init__(self, superior,-1,u"单选框",pos=(100,200),size=(400,500),style=wx.DEFAULT_FRAME_STYLE^(wx.RESIZE_BORDER|wx.MINIMIZE_BOX))
+        wx.Frame.__init__(self, superior,-1,u"多选框",pos=(100,200),size=(400,500),style=wx.DEFAULT_FRAME_STYLE^(wx.RESIZE_BORDER|wx.MINIMIZE_BOX))
         #创建一个panel
         panel = wx.Panel(self)
         #创建一个静态文本
