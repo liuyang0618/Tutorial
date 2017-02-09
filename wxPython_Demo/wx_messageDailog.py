@@ -7,7 +7,7 @@ import wx
 
 class myFrame(wx.Frame):
     def __init__(self,superior):
-        wx.Frame.__init__(self,superior,-1,u"使用对话框",size=(500,450))
+        wx.Frame.__init__(self,superior,-1, u"使用对话框",size=(500,450))
         #创建pannel
         panel = wx.Panel(self,-1)
         #创建一个button
