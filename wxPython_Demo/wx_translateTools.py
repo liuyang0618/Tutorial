@@ -15,6 +15,7 @@ import wx.xrc
 import urllib
 import urllib2
 import json
+import time
 
 ###########################################################################
 ## Class MyFrame1
@@ -56,10 +57,15 @@ class MyFrame1 ( wx.Frame ):
 
     # Virtual event handlers, overide them in your derived class
     def m_button1OnButtonClick( self, event ):
+        #显示翻译原文
+        content = self.m_textCtrl1.GetValue()
+        print(u"翻译原文：%s" % (content))
+
         #显示处理中
         self.m_textCtrl2.SetValue(u"处理中...")
-        content = self.m_textCtrl1.GetValue()
-        print(content)
+        self.m_textCtrl2.Update()  #必须有这个才能显示
+        time.sleep(0.2)
+
         #有道翻译请求的url
         url= "http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule&smartresult=ugc&sessionFrom=dict2.index"
 
