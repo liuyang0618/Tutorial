@@ -51,7 +51,7 @@ class MyFrame1 ( wx.Frame ):
         # Connect Events
         self.m_button1.Bind( wx.EVT_BUTTON, self.m_button1OnButtonClick )
 
-    # Virtual event handlers, overide them in your derived class
+    # Virtual event handlers,  overide them in your derived class
     def m_button1OnButtonClick( self, event ):
         #显示翻译原文
         content = self.m_textCtrl1.GetValue()
