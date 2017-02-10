@@ -58,7 +58,7 @@ class MyFrame1 ( wx.Frame ):
         print(u"翻译原文：%s" % (content))
 
         #显示处理中
-        self.m_textCtrl2.SetValue(u"处理中...")
+        self.m_textCtrl2.SetValue(u"处理中... ")
         self.m_textCtrl2.Update()  #必须有这个才能显示
         time.sleep(0.2)
 
