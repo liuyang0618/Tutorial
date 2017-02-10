@@ -51,10 +51,6 @@ class MyFrame1 ( wx.Frame ):
         # Connect Events
         self.m_button1.Bind( wx.EVT_BUTTON, self.m_button1OnButtonClick )
 
-    def __del__( self ):
-        pass
-
-
     # Virtual event handlers, overide them in your derived class
     def m_button1OnButtonClick( self, event ):
         #显示翻译原文
@@ -96,6 +92,8 @@ class MyFrame1 ( wx.Frame ):
         print(u"翻译的结果为：%s" % (target['translateResult'][0][0]['tgt']))
         self.m_textCtrl2.SetValue(target['translateResult'][0][0]['tgt'])
 
+    def __del__( self ):
+        pass
 
 if __name__ == "__main__":
     #定义应用程序类的一个对象
