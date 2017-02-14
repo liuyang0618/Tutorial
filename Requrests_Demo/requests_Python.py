@@ -63,7 +63,7 @@ def send_request_proxy():
 
     requests.get("http://www.zhidaow.com", proxies=proxies)
 
-if __name__ == "__main__":
+if __name__ == "__main__" :
     send_getRequest()
     #send_postRequest()
     # send_otherRequest()
