@@ -107,10 +107,10 @@ if __name__ == "__main__":
     # 代理设置
     # searcher.urlli2_ProxyHandler()
     # 请求url并设置超时
-    #searcher.urllib2_urlopen()
+    searcher.urllib2_urlopen()
     # 加入特定的header
-    # searcher.urllib2_Request()
-    #获取cookie
-    #searcher.urllib2_getCookie()
+    searcher.urllib2_Request()
+    # 获取cookie
+    searcher.urllib2_getCookie()
     #获取调试日志
     searcher.urllib2_getDebugLog()
