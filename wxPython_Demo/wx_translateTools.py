@@ -55,7 +55,7 @@ class MyFrame1 ( wx.Frame ):
     def m_button1OnButtonClick( self, event ):
         #显示翻译原文
         content = self.m_textCtrl1.GetValue()
-        print(u"翻译原文：%s" % (content))
+        # print(u"翻译原文：%s" % (content))
 
         #显示处理中
         self.m_textCtrl2.SetValue(u"处理中... ")
@@ -89,7 +89,7 @@ class MyFrame1 ( wx.Frame ):
         #通过json将字节流数据转换为字典
         target = json.loads(html)
 
-        print(u"翻译的结果为：%s" % (target['translateResult'][0][0]['tgt']))
+        # print(u"翻译的结果为：%s" % (target['translateResult'][0][0]['tgt']))
         self.m_textCtrl2.SetValue(target['translateResult'][0][0]['tgt'])
 
     def __del__( self ):
