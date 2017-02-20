@@ -1,0 +1,60 @@
+Python + Selenium 自动化测试框架
+一: 完成基本的登录业务
+login.py文件：
+=======================
+#encoding:utf-8
+
+import time
+from selenium import webdriver
+#启动火狐浏览器
+browser = webdriver.Firefox()
+#访问的url
+url = 'http://www.maiziedu.com'
+#访问url
+browser.get(url)
+#窗口最大化
+browser.maximize_window()
+#查找搜索框
+login_btn = browser.find_element_by_link_text(u"登录")
+#点击登录按钮
+login_btn.click()
+time.sleep(2)
+#点击用户名输入框
+account_input = browser.find_element_by_id("id_account_l")
+#清空账户
+account_input.clear()
+#输入用户名
+account_input.send_keys("maizi_test@139.com")
+#点击密码输入框
+password_input =  browser.find_element_by_id("id_password_l")
+#清空密码
+password_input.clear()
+#输入密码
+password_input.send_keys("abc123456")
+#点击登录
+browser.find_element_by_id("login_btn").click()
+
+二：优化_模块化
+模块化的目标是“高内聚低耦合”。 增加代码的灵活性、复用性和可维护性。
+
+内聚性：又称块内联系。
+高内聚：由相关性很强的代码组成，只负责一项任务，也就是常说的单一责任原则。
+功能内聚：模块内所有元素的各个组成部分全部都为完成同一个功能而存在，共同完成一个单一的功能，模块已不可再分。
+即模块仅包括为完成某个功能所必须的所有成分，这些成分紧密联系、缺一不可。
+功能内聚是最强的内聚，其优点是它的功能明确。判断一个模块是否功能内聚，一般从模块名称就能看出。
+如果模块名称只有一个动词和一个特定的目标（单数名词），一般来说就是功能内聚，如：“计算水费”、“计算产值”等模块。功能内聚一般出现在软件结构图的较低层次上。
+
+
+耦合：也称块间联系。
+低耦合：模块与模块之间要相互独立，降低耦合性，方面项目的管理和维护。
+
+登录模块：
+内聚：组合部分的函数封装
+openBrowser()
+openUrl()
+findElement()
+sendKeys()
+checkResult()
+
+
+
